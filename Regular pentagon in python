@@ -1,0 +1,10 @@
+Write code to draw a regular pentagon (a five-sided figure with all sides the same length).
+
+
+
+import turtle
+wn = turtle.Screen()
+a=turtle.Turtle()
+for _ in range (5):
+    a.forward(50)
+    a.left(360/
