@@ -1,0 +1,36 @@
+Using the file school_prompt2.txt, find the number of characters in the file and assign that value to the variable num_char.
+
+
+a =open("school_prompt2.txt")
+num_char =0
+for i in a.read():
+    num_char +=1
+a.close()
+
+
+
+Find the number of lines in the file, travel_plans2.txt, and assign it to the variable num_lines.
+
+
+a =open("travel_plans2.txt","r")
+
+num_lines =0
+
+for i in a.readlines():
+
+    num_lines += 1
+
+a.close()
+
+
+
+Create a string called first_forty that is comprised of the first 40 characters of emotion_words2.txt.
+
+
+a =open("emotion_words2.txt","r")
+
+first_forty =a.read(40)
+
+a.close
+
+
