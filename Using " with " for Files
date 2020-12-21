@@ -1,0 +1,9 @@
+with open('mydata.txt', 'r') as md:
+    for line in md:
+        print(line)
+        
+        
+# continue on with other code
+a=open("mydata.txt","r")
+for i in a:
+    print(i)
