@@ -1,0 +1,18 @@
+1. Write a function named total that takes a list of integers as input, and returns the total value of all those integers added together.
+
+def total(x):
+    c=0
+    for i in x:
+        c=c+i
+    return c
+print(total([1,2,3,4]))
+
+
+2. Write a function called count that takes a list of numbers as input and returns a count of the number of elements in the list.
+
+def count(x):
+    c=0
+    for i in x:
+        c=c+1
+    return c
+print(count([1,2,3,4]))
