@@ -23,4 +23,42 @@ tups = [('a', 'b', 'c'), (8, 7, 6, 5), ('blue', 'green', 'yellow', 'orange', 're
 seconds =[]
 for i in tups:
     seconds +=[i[1]]
+    
+    
+    
+    
+    
+    Tuples asReturn Values
+    
+    
+    Define a function called information that takes as input, the variables name, birth_year, fav_color, and hometown. It should return a tuple of these variables in this order.
+
+def information(name,birth_year,fav_color,hometown):
+    name = name
+    birth_year= birth_year
+    fav_color = fav_color
+    hometown= hometown
+    return name,birth_year,fav_color,hometown
+print(information("gopal","5-7-98","red","gjdfv"))
+
+
+
+Define a function called info with the following required parameters: name, age, birth_year, year_in_college, and hometown. The function should return a tuple that contains all the inputted information.
+
+
+def info(name,age,birth_year,year_in_college,hometown):
+    name= name
+    age =age
+    birth_year=birth_year
+    year_in_college = year_in_college
+    hometown= hometown
+    return name,age,birth_year,year_in_college,hometown
+print (info("Rajenda","25","5-7-1996","2014","Martur"))
+
+
+    
+    
+    
+    
+    
 
