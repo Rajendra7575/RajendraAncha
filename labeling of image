@@ -1,0 +1,73 @@
+import numpy as np
+import cv2 
+labels =["dog","cat","panda"]
+np.random.seed(1)
+W = np.random.randn(3, 3072)
+b = np.random.randn(3)
+ 
+orig = cv2.imread("Dog.png")
+image = cv2.resize(orig, (32, 32)).flatten()
+scores=W.dot(image)+b
+ 
+for(label,score) in zip(labels,scores):
+    print("[INFO]{}:{:.2f}".format(label,score))
+[INFO]dog:14221.03
+[INFO]cat:-2126.97
+[INFO]panda:-4096.44
+cv2.putText(orig, "Label: {}".format(labels[np.argmax(scores)]),
+     (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
+     
+     
+     out put: 17 line
+array([[[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       ...,
+
+       [[  0,   0,   0],
+        [  0,   0,   0],
+        [  0,   0,   0],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[  0,   0,   0],
+        [  0,   0,   0],
+        [  0,   0,   0],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]],
+
+       [[  0,   0,   0],
+        [  0,   0,   0],
+        [  0,   0,   0],
+        ...,
+        [255, 255, 255],
+        [255, 255, 255],
+        [255, 255, 255]]], dtype=uint8)
+cv2.imshow("Image",orig)
+cv2.waitKey(0)
+ 
